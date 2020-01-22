@@ -12,7 +12,7 @@ lib 'shlib'
     {
     steps
     {
-    github SumaVarshitha,'sumavarshitha.kamatam997@gmail.com'
+    github 'github'
     }
     }
     stage('build')
