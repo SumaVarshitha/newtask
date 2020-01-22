@@ -1,21 +1,21 @@
-@Library('shlib')_
 pipeline {
-    agent any
-    tools {
-        maven "Maven"   
-    }   
-  
+libraries{
+lib 'shlib'
+}
+
+ agent any
+   tools{
+        maven "Maven"
+    }
     stages {
-    stage('git checkout'){
-    steps{
+    stage('git checkuot')
+    {
     github()
     }
+    stage('build')
+    {
+    build 'BUILD'
     }
-        stage('Compile-Build-Test ') {
-            steps {
-	    	
-                build 'BUILD'
-            }
-        }
-        }
 }
+}
+
