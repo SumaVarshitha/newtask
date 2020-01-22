@@ -8,14 +8,20 @@ lib 'shlib'
         maven "Maven"
     }
     stages {
-    stage('git checkuot')
+    stage('git checkOUt')
+    {
+    steps
     {
     github()
     }
+    }
     stage('build')
+    {
+    steps
     {
     build 'BUILD'
     }
+    ]
 }
 }
 
