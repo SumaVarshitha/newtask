@@ -21,7 +21,7 @@ lib 'shlib'
     {
     gitrepo()
     }
-     stage('git branch')
+    stage('git branch')
     {
     steps
     {
