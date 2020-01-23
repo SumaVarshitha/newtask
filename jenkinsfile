@@ -12,7 +12,7 @@ lib 'shlib'
     {
     steps
     {
-    github 'github'
+    gitbranch 'gitbranch'
     }
     }
     stage('build')
