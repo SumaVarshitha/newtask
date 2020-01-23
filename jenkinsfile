@@ -12,7 +12,7 @@ lib 'shlib'
     {
     steps
     {
-    gitconnector()
+    gitrepolist()
     }
     }
     stage('build')
