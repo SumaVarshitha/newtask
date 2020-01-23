@@ -15,6 +15,13 @@ lib 'shlib'
     gitrepolist()
     }
     }
+    stage('git repo')
+    {
+    steps
+    {
+    github()
+    }
+    }
     stage('build')
     {
     steps
