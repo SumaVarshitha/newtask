@@ -21,13 +21,14 @@ lib 'shlib'
     {
     gitrepo()
     }
+    }
     stage('git branch')
     {
     steps
     {
     gitnewbranch()
     }
-    }
+    
     }
     stage('build')
     {
