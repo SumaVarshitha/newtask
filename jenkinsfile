@@ -22,11 +22,11 @@ lib 'shlib'
     gitrepo()
     }
     }
-    stage('git branch')
+    stage('gitlab repo')
     {
     steps
     {
-    gitnewbranch()
+    gitlabrepo()
     }
     
     }
