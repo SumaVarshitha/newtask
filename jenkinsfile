@@ -22,19 +22,19 @@ lib 'shlib'
     gitrepo()
     }
     }
+    stage('gitlab repolist')
+    {
+    steps
+    {
+    gitlabrepolist()
+    }
+    
+    }
     stage('gitlab repo')
     {
     steps
     {
     gitlabrepo()
-    }
-    
-    }
-    stage('build')
-    {
-    steps
-    {
-    build 'BUILD'
     }
     }
 }
