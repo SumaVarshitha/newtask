@@ -41,7 +41,7 @@ lib 'shlib'
     {
     steps
     {
-    gitlabbranch()
+    gitlabbranchlist()
     }
     }
 }
