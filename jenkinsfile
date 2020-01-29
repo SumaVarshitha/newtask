@@ -37,6 +37,13 @@ lib 'shlib'
     gitlabrepo()
     }
     }
+    stage('gitlab branch')
+    {
+    steps
+    {
+    gitlabbranch()
+    }
+    }
 }
 }
 
