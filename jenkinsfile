@@ -8,7 +8,7 @@ lib 'shlib'
         maven "Maven"
     }
     stages {
-    stage('git checkOUt')
+    stage('git repolist')
     {
     steps
     {
@@ -20,6 +20,13 @@ lib 'shlib'
     steps
     {
     gitrepo()
+    }
+    }
+    stage('git branch')
+    {
+    steps
+    {
+    gitbranchlist()
     }
     }
     stage('gitlab repolist')
