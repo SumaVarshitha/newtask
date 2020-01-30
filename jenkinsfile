@@ -44,6 +44,14 @@ lib 'shlib'
     }
     
     }
+    stage('gitlab repolist par')
+    {
+    steps
+    {
+    collectgitlabrepos()
+    }
+    }
+    
     stage('gitlab repo')
     {
     steps
