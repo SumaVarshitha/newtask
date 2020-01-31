@@ -45,7 +45,7 @@ lib 'shlib'
     {
     steps
     {
-    collectgitlabrepos()
+    gitlabrepolist()
     log_gitlab("collected project list succesfully")
     }
     post{
