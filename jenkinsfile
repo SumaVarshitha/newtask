@@ -22,13 +22,7 @@ lib 'shlib'
     gitrepo()
     }
     }
-    stage('gitlab repo par')
-    {
-    steps
-    {
-    createrepogitlab()
-    }
-    }
+    
     stage('git branch')
     {
     steps
@@ -36,15 +30,8 @@ lib 'shlib'
     gitbranchlist()
     }
     }
-    stage('gitlab repolist')
-    {
-    steps
-    {
-    gitlabrepolist()
-    }
     
-    }
-    stage('gitlab repolist par')
+    stage('gitlab repolist ')
     {
     steps
     {
@@ -56,7 +43,7 @@ lib 'shlib'
     {
     steps
     {
-    gitlabrepo()
+    createrepogitlab()
     }
     }
     stage('gitlab branch list')
