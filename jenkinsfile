@@ -13,15 +13,25 @@ lib 'shlib'
     steps
     {
     gitrepolist()
+    logfunction("collected repos list succesfully")
     }
-    }
+    post{
+    failure{
+    logfunction("repo list is not collected")
+    }}}
    stage('git repo')
     {
     steps
     {
     gitrepo()
+    logfunction("created repo succesfully")
     }
-    }
+    post{
+    failure{
+    logfunction("repo list is not collected")
+    }}}
+    
+    
     
     stage('git branch')
     {
@@ -53,13 +63,7 @@ lib 'shlib'
     gitlabbranchlist()
     }
     }
-    stage('log git')
-    {
-    steps
-    {
-    logfunction()
-    }
-    }
+    
     stage('gitlab branch')
     {
     steps
