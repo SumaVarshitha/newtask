@@ -46,16 +46,28 @@ lib 'shlib'
     steps
     {
     collectgitlabrepos()
+    log_gitlab("collected project list succesfully")
     }
-    }
+    post{
+    failure{
+    log_gitlab("project list is not collected")
+    }}}
+    
+    
     
     stage('gitlab repo')
     {
     steps
     {
     createrepogitlab()
+     log_gitlab("created succesfully")
     }
-    }
+    post{
+    failure{
+    log_gitlab("project list is not collected")
+    }}}
+    
+    
     stage('gitlab branch list')
     {
     steps
