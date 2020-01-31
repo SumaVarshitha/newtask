@@ -13,22 +13,22 @@ lib 'shlib'
     steps
     {
     gitrepolist()
-    logfunction("collected repos list succesfully")
+    log_github("collected repo list succesfully")
     }
     post{
     failure{
-    logfunction("repo list is not collected")
+    log_github("repo list is not collected")
     }}}
    stage('git repo')
     {
     steps
     {
     gitrepo()
-    logfunction("created repo succesfully")
+    log_github("created  succesfully")
     }
     post{
     failure{
-    logfunction("repo list is not collected")
+    log_github("not created")
     }}}
     
     
