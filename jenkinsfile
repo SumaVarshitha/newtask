@@ -33,7 +33,7 @@ lib 'shlib'
     
     
     
-    stage('git branch')
+    stage('git branch list')
     {
     steps
     {
