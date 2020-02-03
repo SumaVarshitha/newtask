@@ -40,6 +40,13 @@ lib 'shlib'
     gitbranchlist()
     }
     }
+     stage('git branch')
+    {
+    steps
+    {
+    gitbranch()
+    }
+    }
     
     stage('gitlab repolist ')
     {
