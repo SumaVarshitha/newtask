@@ -83,13 +83,13 @@ lib 'shlib'
     }
     }
     
-   /* stage('gitlab branch')
+    stage('gitlab branch')
     {
     steps
     {
     gitlabbranch()
     }
-    }*/
+    }
 }
 }
 
