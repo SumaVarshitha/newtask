@@ -8,7 +8,7 @@ lib 'shlib'
         maven "Maven"
     }
     stages {
-    stage('git repolist')
+  /* stage('git repolist')
     {
     steps
     {
@@ -82,7 +82,7 @@ lib 'shlib'
     gitlabbranchlist()
     }
     }
-    
+    */
     stage('gitlab branch')
     {
     steps
