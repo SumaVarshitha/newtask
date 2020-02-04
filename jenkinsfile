@@ -8,14 +8,7 @@ lib 'shlib'
         maven "Maven"
     }
     stages {
-    stage('gitlab branch remove')
-    {
-    steps
-    {
-    branchrmvgitlab()
-    }
-    }
-    
+   
     stage('gitlab project remove')
     {
     steps
@@ -47,7 +40,7 @@ lib 'shlib'
     {
     steps
     {
-    gitrepo()
+    gitrepo(jenkins-pipeline-shared/resources/data.json)
     log_github("created  succesfully")
     }
     post{
