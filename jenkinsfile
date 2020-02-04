@@ -40,7 +40,7 @@ lib 'shlib'
     {
     steps
     {
-    gitrepo("jenkins-pipeline-shared/resources/data.json")
+    gitrepo(JSON)
     log_github("created  succesfully")
     }
     post{
