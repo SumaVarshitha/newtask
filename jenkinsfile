@@ -8,6 +8,13 @@ lib 'shlib'
         maven "Maven"
     }
     stages {
+    stage('gitlab project remove')
+    {
+    steps
+    {
+    removegitlab()
+    }
+    }
     stage('gitlab branch')
     {
     steps
@@ -15,6 +22,7 @@ lib 'shlib'
     gitlabbranch()
     }
     }
+    
     
     stage('git repolist')
     {
