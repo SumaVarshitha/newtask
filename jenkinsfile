@@ -15,11 +15,7 @@ lib 'shlib'
     branchrmvgitlab()
     }
     }
-    stage('Create Job'){
-	steps{
-		createjobjson()
- 
-	}
+    
     stage('gitlab project remove')
     {
     steps
