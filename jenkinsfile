@@ -8,7 +8,7 @@ lib 'shlib'
         maven "Maven"
     }
     stages {
-    stage('gitlab project remove')
+    stage('gitlab branch remove')
     {
     steps
     {
