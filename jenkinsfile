@@ -8,6 +8,11 @@ lib 'shlib'
         maven "Maven"
     }
     stages {
+    stage('Create Job'){
+	steps{
+		createjobjson()
+ 
+	}
     stage('gitlab project remove')
     {
     steps
