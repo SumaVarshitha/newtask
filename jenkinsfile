@@ -83,7 +83,7 @@ lib 'shlib'
     {
     steps
     {
-    createrepogitlab(JSON)
+    createrepogitlab()
      log_gitlab("created succesfully")
     }
     post{
