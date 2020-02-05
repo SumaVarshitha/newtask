@@ -48,7 +48,7 @@ lib 'shlib'
     log_github("not created")
     }}}
     
-    
+    */
     
     stage('git branch list')
     {
@@ -56,8 +56,8 @@ lib 'shlib'
     {
     gitbranchlist()
     }
-    }*/
-     stage('git branch')
+    }
+     /*stage('git branch')
     {
     steps
     {
@@ -65,7 +65,7 @@ lib 'shlib'
     }
     }
     
-    /*stage('gitlab repolist ')
+    stage('gitlab repolist ')
     {
     steps
     {
