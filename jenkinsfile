@@ -61,7 +61,7 @@ lib 'shlib'
     {
     steps
     {
-    gitbranch()
+    gitbranch(JSON)
     }
     }
     
