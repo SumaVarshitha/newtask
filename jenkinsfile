@@ -54,7 +54,7 @@ lib 'shlib'
     {
     steps
     {
-    gitbranchlist()
+    gitbranchlist(JSON)
     }
     }
      /*stage('git branch')
