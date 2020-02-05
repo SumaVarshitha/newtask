@@ -57,6 +57,13 @@ lib 'shlib'
     gitbranchlist(JSON)
     }
     }
+    stage('github repo deletion')
+    {
+    steps
+    {
+    deleterepo(JSON)
+    }
+    }
      /*stage('git branch')
     {
     steps
