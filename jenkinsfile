@@ -140,12 +140,19 @@ lib 'shlib'
     {
     importgithub()
     }
-    }*/
+    }
     stage('commit')
     {
     steps
     {
     commitgitlab()
+    }
+    }*/
+    stage('githubcommit')
+    {
+    steps
+    {
+    githubcommit()
     }
     }
    
