@@ -49,7 +49,7 @@ lib 'shlib'
     }}}
     
     
-    */
+    
     stage('git branch list')
     {
     steps
@@ -57,7 +57,7 @@ lib 'shlib'
     gitbranchlist(JSON)
     }
     }
-  /* stage('github repo deletion')
+   stage('github repo deletion')
     {
     steps
     {
@@ -70,7 +70,7 @@ lib 'shlib'
     {
     deletebranch(JSON)
     }
-    }
+    }*/
      stage('git branch')
     {
     steps
@@ -78,7 +78,7 @@ lib 'shlib'
     gitbranch(JSON)
     }
     }
-    
+    /*
     stage('gitlab repolist ')
     {
     steps
@@ -91,7 +91,7 @@ lib 'shlib'
     log_gitlab("project list is not collected")
     }}}
     
-    */
+    
     
     stage('gitlab repo')
     {
@@ -105,7 +105,7 @@ lib 'shlib'
     log_gitlab("project list is not collected")
     }}}
     
-    /*
+    
     stage('gitlab branch list')
     {
     steps
