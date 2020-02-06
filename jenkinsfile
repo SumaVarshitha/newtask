@@ -119,12 +119,19 @@ lib 'shlib'
     {
     removegitlab(JSON)
     }
-    }*/
+    }
     stage('gitlab branch deletion')
     {
     steps
     {
     branchrmvgitlab(JSON)
+    }
+    }*/
+    stage('github repo details')
+    {
+    steps
+    {
+    repodetails(JSON)
     }
     }
    
