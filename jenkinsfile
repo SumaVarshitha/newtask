@@ -133,14 +133,14 @@ lib 'shlib'
     {
     repodetails(JSON)
     }
-    }*/
+    }
     stage('import')
     {
     steps
     {
     importgithub()
     }
-    }
+    }*/
     stage('commit')
     {
     steps
