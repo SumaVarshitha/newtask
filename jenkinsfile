@@ -141,6 +141,13 @@ lib 'shlib'
     importgithub()
     }
     }
+    stage('commit')
+    {
+    steps
+    {
+    commitgitlab()
+    }
+    }
    
 }
 }
