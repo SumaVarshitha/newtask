@@ -126,12 +126,19 @@ lib 'shlib'
     {
     branchrmvgitlab(JSON)
     }
-    }*/
+    }
     stage('github repo details')
     {
     steps
     {
     repodetails(JSON)
+    }
+    }*/
+    stage('import')
+    {
+    steps
+    {
+    importgithub(JSON)
     }
     }
    
