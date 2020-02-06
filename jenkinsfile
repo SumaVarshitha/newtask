@@ -15,7 +15,7 @@ lib 'shlib'
     {
     removegitlab()
     }
-    }*/
+    }
     stage('gitlab branch')
     {
     steps
@@ -24,7 +24,7 @@ lib 'shlib'
     }
     }
     
-    /*
+    
     stage('git repolist')
     {
     steps
@@ -49,7 +49,7 @@ lib 'shlib'
     }}}
     
     
-    
+    */
     stage('git branch list')
     {
     steps
@@ -57,7 +57,7 @@ lib 'shlib'
     gitbranchlist(JSON)
     }
     }
-   stage('github repo deletion')
+  /* stage('github repo deletion')
     {
     steps
     {
