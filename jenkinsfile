@@ -91,7 +91,7 @@ lib 'shlib'
     log_gitlab("project list is not collected")
     }}}
     
-    
+    */
     
     stage('gitlab repo')
     {
@@ -105,7 +105,7 @@ lib 'shlib'
     log_gitlab("project list is not collected")
     }}}
     
-    
+    /*
     stage('gitlab branch list')
     {
     steps
