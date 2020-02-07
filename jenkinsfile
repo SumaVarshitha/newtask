@@ -49,14 +49,6 @@ lib 'shlib'
     }
     }
     
-    stage('github repo deletion')
-    {
-    steps
-    {
-    deleterepo(JSON)
-    }
-    }
-    
     stage('github branch deletion')
     {
     steps
@@ -65,13 +57,19 @@ lib 'shlib'
     }
     }
     
-    stage('github repo details')
+    
+    stage('github repo deletion')
     {
     steps
     {
-    repodetails(JSON)
+    deleterepo(JSON)
     }
     }
+    
+    
+    
+    
+    
     
      stage('githubcommit')
     {
@@ -121,13 +119,7 @@ lib 'shlib'
     }
     }
     
-   stage('gitlab project deletion')
-    {
-    steps
-    {
-    removegitlab(JSON)
-    }
-    }
+   
     
     stage('gitlab branch deletion')
     {
@@ -136,6 +128,14 @@ lib 'shlib'
     branchrmvgitlab(JSON)
     }
     } 
+    
+    stage('gitlab project deletion')
+    {
+    steps
+    {
+    removegitlab(JSON)
+    }
+    }
     
     stage('import')
     {
