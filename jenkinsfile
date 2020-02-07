@@ -9,22 +9,6 @@ lib 'shlib'
     }
     stages {
    
-   /* stage('gitlab project remove')
-    {
-    steps
-    {
-    removegitlab()
-    }
-    }
-    stage('gitlab branch')
-    {
-    steps
-    {
-    gitlabbranch(JSON)
-    }
-    }
-    
-    
     stage('git repolist')
     {
     steps
@@ -36,7 +20,8 @@ lib 'shlib'
     failure{
     log_github("repo list is not collected")
     }}}
-   stage('git repo')
+    
+    stage('git repo')
     {
     steps
     {
@@ -48,8 +33,6 @@ lib 'shlib'
     log_github("not created")
     }}}
     
-    
-    
     stage('git branch list')
     {
     steps
@@ -57,13 +40,23 @@ lib 'shlib'
     gitbranchlist(JSON)
     }
     }
-   stage('github repo deletion')
+    
+    stage('git branch')
+    {
+    steps
+    {
+    gitbranch(JSON)
+    }
+    }
+    
+    stage('github repo deletion')
     {
     steps
     {
     deleterepo(JSON)
     }
     }
+    
     stage('github branch deletion')
     {
     steps
@@ -71,11 +64,20 @@ lib 'shlib'
     deletebranch(JSON)
     }
     }
-     stage('git branch')
+    
+    stage('github repo details')
     {
     steps
     {
-    gitbranch(JSON)
+    repodetails(JSON)
+    }
+    }
+    
+     stage('githubcommit')
+    {
+    steps
+    {
+    githubcommit(JSON)
     }
     }
     
@@ -91,8 +93,6 @@ lib 'shlib'
     log_gitlab("project list is not collected")
     }}}
     
-    
-    
     stage('gitlab repo')
     {
     steps
@@ -105,7 +105,6 @@ lib 'shlib'
     log_gitlab("project list is not collected")
     }}}
     
-    
     stage('gitlab branch list')
     {
     steps
@@ -113,27 +112,31 @@ lib 'shlib'
     gitlabbranchlist()
     }
     }
-    stage('gitlab project deletion')
+    
+    stage('gitlab branch')
+    {
+    steps
+    {
+    gitlabbranch(JSON)
+    }
+    }
+    
+   stage('gitlab project deletion')
     {
     steps
     {
     removegitlab(JSON)
     }
     }
+    
     stage('gitlab branch deletion')
     {
     steps
     {
     branchrmvgitlab(JSON)
     }
-    }
-    stage('github repo details')
-    {
-    steps
-    {
-    repodetails(JSON)
-    }
-    }
+    } 
+    
     stage('import')
     {
     steps
@@ -141,21 +144,35 @@ lib 'shlib'
     importgithub()
     }
     }
+    
     stage('commit')
     {
     steps
     {
     commitgitlab()
     }
-    }*/
-    stage('githubcommit')
-    {
-    steps
-    {
-    githubcommit(JSON)
     }
-    }
+   
    
 }
 }
+    
+    
+   
+    
+    
+    
+   
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
