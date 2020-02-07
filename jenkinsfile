@@ -9,7 +9,7 @@ lib 'shlib'
     }
     stages {
    
-    stage('git repolist')
+   /* stage('git repolist')
     {
     steps
     {
@@ -142,7 +142,7 @@ lib 'shlib'
     removegitlab(JSON)
     }
     }
-    
+    */
     stage('import')
     {
     steps
