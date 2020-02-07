@@ -107,7 +107,7 @@ lib 'shlib'
     {
     steps
     {
-    gitlabbranchlist()
+    gitlabbranchlist(JSON)
     }
     }
     
