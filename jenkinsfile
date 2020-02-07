@@ -7,9 +7,9 @@ lib 'shlib'
    tools{
         maven "Maven"
     }
-    stages {
+    /*stages {
    
-   /* stage('git repolist')
+   stage('git repolist')
     {
     steps
     {
