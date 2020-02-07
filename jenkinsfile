@@ -66,7 +66,13 @@ lib 'shlib'
     }
     }
     
-    
+    stage('github repo details')
+    {
+    steps
+    {
+    repodetails(JSON)
+    }
+    }
     
     
     
@@ -142,7 +148,7 @@ lib 'shlib'
     removegitlab(JSON)
     }
     }
-    */
+    
     stage('import')
     {
     steps
@@ -150,9 +156,61 @@ lib 'shlib'
     importgithub()
     }
     }
+    */
     
-    
-   
+   stages{
+   stage('GITHUB')
+   {
+   steps
+   {
+   gitrepolist()
+   log_github("collected repo list succesfully")
+   gitrepo(JSON)
+   log_github("repo created succesfully")
+   gitbranchlist(JSON)
+   log_github("collected branch list succesfully")
+   gitbranch(JSON)
+   log_github("branch created succesfully")
+   deletebranch(JSON)
+   log_github("branch deleted succesfully")
+   deleterepo(JSON)
+   log_github("Repo deleted succesfully")
+   repodetails(JSON)
+   log_github("collected repo details succesfully")
+   githubcommit(JSON)
+   log_github("collected repo commits succesfully")
+   }
+   post{
+    failure{
+    log_github("GitHub failed")
+    }}
+   }
+   stage('GITLAB')
+   {
+   steps
+   {
+   gitlabrepolist()
+   log_github("collected project list succesfully")
+    createrepogitlab(JSON)
+    log_github("projected created succesfully")
+    gitlabbranchlist(JSON)
+    log_github("collected branch list succesfully")
+     gitlabbranch(JSON)
+     log_github("branch created succesfully")
+     commitgitlab()
+     log_github("collected projects commits succesfully")
+     branchrmvgitlab(JSON)
+     log_github("branch deleted succesfully")
+     removegitlab(JSON)
+     log_github("project deleted succesfully")
+     importgithub()
+     log_github("imported github project into gitlab succesfully")
+     }
+     post{
+    failure{
+    log_github("GitLab failed")
+    }}
+     }
    
 }
 }
