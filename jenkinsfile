@@ -203,8 +203,8 @@ lib 'shlib'
      log_github("branch deleted succesfully")
      removegitlab(JSON)
      log_github("project deleted succesfully")
-     importgithub()
-     log_github("imported github project into gitlab succesfully")
+     //importgithub()
+     //log_github("imported github project into gitlab succesfully")
      }
      post{
     failure{
