@@ -206,10 +206,10 @@ lib 'shlib'
      gitlabimportgithub()
      log_function(" gitlab ","imported github project into gitlab succesfully")
      }
-     post{
+     /*post{
     failure{
     log_function("GitLab failed")
-    }}
+    }}*/
      }
    
 }
