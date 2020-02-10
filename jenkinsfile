@@ -159,7 +159,7 @@ lib 'shlib'
     */
     
    stages{
-   stage('GITHUB')
+   /*stage('GITHUB')
    {
    steps
    {
@@ -184,12 +184,12 @@ lib 'shlib'
     failure{
     log_function("GitHub failed")
     }}
-   }
+   }*/
    stage('GITLAB')
    {
    steps
    {
-   gitlabrepolist()
+   /*gitlabrepolist()
    log_function(" gitlab ","collected project list succesfully")
     gitlabcreaterepo(JSON)
     log_function(" gitlab ","projected created succesfully")
@@ -202,7 +202,7 @@ lib 'shlib'
      gitlabbranchrmv(JSON)
      log_function(" gitlab ","branch deleted succesfully")
      gitlabprojremove(JSON)
-     log_function(" gitlab ","project deleted succesfully")
+     log_function(" gitlab ","project deleted succesfully")*/
      gitlabimportgithub()
      log_function(" gitlab ","imported github project into gitlab succesfully")
      }
