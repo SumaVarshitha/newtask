@@ -201,10 +201,10 @@ lib 'shlib'
      log_github("collected projects commits succesfully")
      branchrmvgitlab(JSON)
      log_github("branch deleted succesfully")
-     //removegitlab(JSON)
-    // log_github("project deleted succesfully")
-     //importgithub()
-     //log_github("imported github project into gitlab succesfully")
+    removegitlab(JSON)
+     log_github("project deleted succesfully")
+     importgithub()
+     log_github("imported github project into gitlab succesfully")
      }
      post{
     failure{
