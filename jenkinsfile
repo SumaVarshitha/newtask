@@ -163,15 +163,15 @@ lib 'shlib'
    {
    steps
    {
-   gitrepolist()
+  /* gitrepolist()
    log_function(" github ","collected repo list succesfully")
-   /*gitrepo(JSON)
+   gitrepo(JSON)
    log_function(" github ","repo created succesfully")
    gitbranchlist(JSON)
-   log_function(" github ","collected branch list succesfully")
+   log_function(" github ","collected branch list succesfully")*/
    gitbranch(JSON)
    log_function(" github ","branch created succesfully")
-   gitdeletebranch(JSON)
+   /*gitdeletebranch(JSON)
    log_function(" github ","branch deleted succesfully")
    gitdeleterepo(JSON)
   log_function(" github ","Repo deleted succesfully")
