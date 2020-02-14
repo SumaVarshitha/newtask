@@ -170,8 +170,8 @@ lib 'shlib'
    gitbranchlist(JSON)
    log_function(" github ","collected branch list succesfully")*/
    gitbranch(JSON)
-   log_function(" github ","branch created succesfully")
-   /*gitdeletebranch(JSON)
+   /*log_function(" github ","branch created succesfully")
+   gitdeletebranch(JSON)
    log_function(" github ","branch deleted succesfully")
    gitdeleterepo(JSON)
   log_function(" github ","Repo deleted succesfully")
