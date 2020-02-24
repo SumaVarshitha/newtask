@@ -7,9 +7,9 @@ lib 'shlib'
    tools{
         maven "Maven"
     }
-    /*stages {
+    stages {
    
-   stage('git repolist')
+   /*stage('git repolist')
     {
     steps
     {
@@ -75,17 +75,17 @@ lib 'shlib'
     }
     
     
-    
+    */
     
      stage('githubcommit')
     {
     steps
     {
-    githubcommit(JSON)
+    githubcommit()
     }
     }
     
-    stage('gitlab repolist ')
+   /* stage('gitlab repolist ')
     {
     steps
     {
@@ -156,21 +156,21 @@ lib 'shlib'
     importgithub()
     }
     }
-    */
+    
     
    stages{
    stage('GITHUB')
    {
    steps
    {
-  /* gitrepolist()
+  gitrepolist()
    log_function(" github ","collected repo list succesfully")
    gitrepo(JSON)
    log_function(" github ","repo created succesfully")
    gitbranchlist(JSON)
    log_function(" github ","collected branch list succesfully")*/
    gitbranch(JSON)
-   /*log_function(" github ","branch created succesfully")
+   log_function(" github ","branch created succesfully")
    gitdeletebranch(JSON)
    log_function(" github ","branch deleted succesfully")
    gitdeleterepo(JSON)
@@ -209,9 +209,9 @@ lib 'shlib'
      post{
     failure{
     log_function("GitLab failed")
-    }}*/
+    }}
      }
    
-}
+}*/
 }
 }
