@@ -7,9 +7,9 @@ lib 'shlib'
    tools{
         maven "Maven"
     }
-    stages {
+    /*stages {
    
-   /*stage('git repolist')
+   stage('git repolist')
     {
     steps
     {
@@ -75,7 +75,7 @@ lib 'shlib'
     }
     
     
-    */
+    
     
      stage('githubcommit')
     {
@@ -85,7 +85,7 @@ lib 'shlib'
     }
     }
     
-   /* stage('gitlab repolist ')
+    stage('gitlab repolist ')
     {
     steps
     {
@@ -210,7 +210,16 @@ lib 'shlib'
     failure{
     log_function("GitLab failed")
     }}
-     }
-   */
+     }*/
+   
+   stages{
+   stage(github commit)
+   {
+   steps
+   {
+   githubcommit()
+   }
+   }
+   
 }
 }
