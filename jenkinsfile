@@ -211,7 +211,6 @@ lib 'shlib'
     log_function("GitLab failed")
     }}
      }
-   
-}*/
+   */
 }
 }
