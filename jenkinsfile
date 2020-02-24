@@ -21,7 +21,8 @@ lib 'shlib'
     log_github("repo list is not collected")
     }}}
     
-    stage('git repo')
+
+stage('git repo')
     {
     steps
     {
